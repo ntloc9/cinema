@@ -42,6 +42,13 @@ $("document").ready(function () {
         slidesToShow: 4,
         slidesToScroll: 4
     });
+    $('.carousel').slick({
+        dots: false,
+        arrow: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    })
     $('#sap-chieu').hide();
 });
 

@@ -1,0 +1,304 @@
+/* -------------------- */
+/* BASIC SETUP */
+/* -------------------- */
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Lato', sans-serif;
+    text-rendering: optimizeLegibility;
+    font-size: 20px;
+    font-weight:300;
+    color: #555;
+    overflow-x: hidden 
+}
+
+
+/* -------------------- */
+/* REUSEABLE COMPONENT */
+/* -------------------- */
+
+section {
+    padding: 0 0;
+}
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.clearfix{
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block; 
+    clear: both;
+    height: 0;
+}
+
+/* -------------------- */
+/* NAV COMPONENTS */
+/* -------------------- */
+
+Nav{
+    height: 5vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    border-bottom: 1px solid rgb(255, 255, 255);  
+    background-color: #fff;
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.3)
+}
+
+.nav-bar{
+    /* margin-top: 3px; */
+    transform: translateY(4px);
+}
+
+.logo{
+    display: inline;
+    float: left;
+    width: auto;
+    margin-left: 20px;
+}
+
+.nav-list{
+    list-style: none;
+    /* float: left; */
+    /* width: auto; */
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.nav-list li{
+    display: inline;
+    margin: 0 10px;
+}
+
+.nav-right{
+    display: inline;
+    /* float: right; */
+}
+
+.nav-right .locate{
+    float: right;
+    margin: 0 10px;
+}
+
+.nav-right .account{
+    float: right;
+    margin: 0 10px;
+}
+
+/* -------------------- */
+/* CAROUSEL COMPONENTS */
+/* -------------------- */
+
+.film-show{
+    position: relative;
+    padding: 0;
+}
+
+.carousel{
+    padding-top: 5vh;
+}
+
+/* -------------------- */
+/* DATVE COMPONENTS */
+/* -------------------- */
+
+.section-datve{
+    max-width: 940px;
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: 100%;
+    left: 50%;
+    /* border-radius: 20px; */
+    /* background-color: rgb(226, 115, 115); */
+    transform: translate(-50%, -50%);
+    margin: auto;
+}
+
+.select-box{
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.select-selected {
+    background-color: DodgerBlue;
+}  
+
+.select-box:first-of-type{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.select-box:last-of-type{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.small-block-30{
+    width: 30%;
+    background-color: aquamarine
+}
+
+.select-box select{
+    display: none;
+}
+
+.small-block{
+    width: calc(70%/4);
+}
+
+.small-block:nth-last-of-type(0){
+    background-color: rgb(57, 57, 75);
+}
+
+.small-block:nth-last-of-type(1){
+    background-color: rgb(124, 124, 231);
+}
+
+.small-block:nth-last-of-type(2){
+    background-color: rgb(229, 231, 124);
+}
+
+.small-block:nth-last-of-type(3){
+    background-color: rgb(202, 97, 228);
+}
+
+.small-block:nth-last-of-type(4){
+    background-color: rgb(226, 115, 115);
+}
+
+/* -------------------- */
+/* MOVIE SLIDE COMPONENTS */
+/* -------------------- */
+
+/* ----Tab-Section---- */
+
+.section-movie{
+    margin-top: 50px;
+}
+
+.tab-slider--nav{
+    width: 100%;
+    /* display: block; */
+    margin-bottom: 20px;
+}
+
+.tab-slider--tabs{
+    width: 20%;
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* text-align: center; */
+    overflow: hidden;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    background: #fff;
+    margin-left: 40%;
+}
+
+.tab-slider--tabs:after {
+    content: "";
+    width: 50%;
+    background: #b2bec3;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 250ms ease-in-out;
+    border-radius: 35px;
+}
+
+.slide:after {
+    left: 50%;
+}
+
+.tab-slider--trigger{
+    font-size: 12px;
+    line-height: 1;
+    font-weight: bold;
+    color: #345F90;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 11px 20px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    display: inline-block;
+    transition: color 250ms ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.tab-slider--trigger.active {
+    color: #fff;
+}
+
+/* ----Tab-Content-Section---- */
+.tab-slider--contents{
+    width: 80%;
+    margin-left: 10%;
+}
+.slick-bla{
+    text-align: center;
+}
+
+.tab-slider--body .inactive{
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.tab-slider--body .active{
+    height: auto;
+}
+
+.slick-prev:before, .slick-next:before { 
+    color:red !important;
+}
+
+.movie-block-title{
+    font-weight: 600;
+    text-align: left;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.movie-block-detail{
+    text-align: left;
+    font-size: 13px;
+}
+
+.movie-block-detail .time{
+    display: inline;
+}
+.movie-block-detail .time::after{
+    contain: ".";
+    border-top-color: #555;
+}
+.movie-block-detail .imdb{
+    display: inline;
+}
+
+
+

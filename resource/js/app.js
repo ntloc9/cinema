@@ -48,8 +48,14 @@ $("document").ready(function () {
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1
-    })
+    });
     $('#sap-chieu').hide();
+
+});
+
+$('.movie-block .thumbnail img').hover(function () {
+    console.log("1");
+    $('.movie-block .thumbnail .hover button').toggleClass('activeHover');
 });
 
 $(".tab-slider--nav li").click(function () {
@@ -67,3 +73,4 @@ $(".tab-slider--nav li").click(function () {
     $(".tab-slider--nav li").removeClass("active");
     $(this).addClass("active");
 });
+

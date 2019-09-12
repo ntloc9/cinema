@@ -34,29 +34,33 @@
 // }
 
 $("document").ready(function () {
-    $('.slick-bla').slick({
-        dots: true,
-        infinite: false,
-        arrow: true,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 4
-    });
-    $('.carousel').slick({
-        dots: false,
-        arrow: true,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    });
+    // khởi tạo slick
+    initSlick();
     $('#sap-chieu').hide();
-
+    console.log($('.prevCarousel'));
 });
 
-$('.movie-block .thumbnail img').hover(function () {
-    console.log("1");
-    $('.movie-block .thumbnail .hover button').toggleClass('activeHover');
+// ĐÓNG MỞ BOX TRAILER
+
+$('.box-trailer').click(function(e){
+    e.preventDefault();
+    $('.modal-box-trailer').show();
 });
+
+// var span = $('.close')[0];
+
+$('.close').click(function (){
+    $('.modal-box-trailer').hide();
+})
+
+$('.movie-block').hover(function (e) {
+    // console.log($(this).find('.info-detail'));
+    $(this).find('.info-detail').toggleClass('hoverHide');
+    $(this).find('.movie-block-hover').toggleClass('hoverShow');
+    $(this).find('.thumbnail img').toggleClass('blurImg');
+});
+
+// MOVIE TAB SLIDE
 
 $(".tab-slider--nav li").click(function () {
     $('.slick-bla').slick('refresh');
@@ -73,4 +77,27 @@ $(".tab-slider--nav li").click(function () {
     $(".tab-slider--nav li").removeClass("active");
     $(this).addClass("active");
 });
+
+// KHỞI TẠO SLICK
+function initSlick() {
+    $('.slick-bla').slick({
+        dots: true,
+        infinite: false,
+        arrow: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4
+    });
+    $('.carousel').slick({
+        dots: false,
+        arrow: true,
+        speed: 600,
+        autoplay: true,
+        autoplaySpeed: 3500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="prevCarousel"><i class="fas fa-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="nextCarousel"><i class="fas fa-chevron-right"></i></button>'
+    });
+}
 

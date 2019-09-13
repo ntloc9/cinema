@@ -36,31 +36,37 @@
 $("document").ready(function () {
     // khởi tạo slick
     initSlick();
+    trailerBox();
     $('#sap-chieu').hide();
-    console.log($('.prevCarousel'));
+    hoverMobieBlock();
 });
 
 // ĐÓNG MỞ BOX TRAILER
 
-$('.box-trailer').click(function(e){
-    e.preventDefault();
-    $('.modal-box-trailer').show();
-});
+function trailerBox() {
+    $('.box-trailer').click(function (e) {
+        e.preventDefault();
+        $('.modal-box-trailer').show();
+    });
 
-// var span = $('.close')[0];
+    // var span = $('.close')[0];
 
-$('.close').click(function (){
-    $('.modal-box-trailer').hide();
-})
+    $('.close').click(function () {
+        $('.modal-box-trailer').hide();
+    })
 
-$('.movie-block').hover(function (e) {
-    // console.log($(this).find('.info-detail'));
-    $(this).find('.info-detail').toggleClass('hoverHide');
-    $(this).find('.movie-block-hover').toggleClass('hoverShow');
-    $(this).find('.thumbnail img').toggleClass('blurImg');
-});
+}
 
-// MOVIE TAB SLIDE
+function hoverMobieBlock() {
+    $('.movie-block').hover(function (e) {
+        // console.log($(this).find('.info-detail'));
+        $(this).find('.info-detail').toggleClass('hoverHide');
+        $(this).find('.movie-block-hover').toggleClass('hoverShow');
+        $(this).find('.thumbnail img').toggleClass('blurImg');
+    });
+}
+
+// MOVIE TAB
 
 $(".tab-slider--nav li").click(function () {
     $('.slick-bla').slick('refresh');
@@ -76,6 +82,7 @@ $(".tab-slider--nav li").click(function () {
     }
     $(".tab-slider--nav li").removeClass("active");
     $(this).addClass("active");
+    hoverMobieBlock();
 });
 
 // KHỞI TẠO SLICK

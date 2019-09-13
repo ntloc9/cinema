@@ -4,6 +4,14 @@
 
 /* -------------------- */
 
+@font-face {
+    font-family: "Lato-Regular";
+    src: url("./resource/css/fonts/lato-regular.woff2") format("woff2");
+    /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +19,7 @@
 }
 
 html {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato-Regular', sans-serif;
     text-rendering: optimizeLegibility;
     font-size: 20px;
     font-weight: 300;
@@ -68,7 +76,7 @@ Nav {
 }
 
 .nav-bar {
-    /* margin-top: 3px; */
+    margin-top: calc(3px/2);
     transform: translateY(4px);
 }
 
@@ -124,7 +132,7 @@ Nav {
     padding-top: 35px;
 }
 
-.prevCarousel, .nextCarousel{
+.prevCarousel, .nextCarousel {
     border: none;
     background-color: transparent;
     position: absolute;
@@ -134,7 +142,7 @@ Nav {
     cursor: pointer;
 }
 
-.prevCarousel{
+.prevCarousel {
     top: 50%;
     left: 3%;
 }
@@ -318,9 +326,8 @@ Nav {
 /* ---Movie Block Section--- */
 
 .movie-block {
-    position: relative; 
+    position: relative;
     padding: 5px 0 0 6px;
-
 }
 
 .movie-block .info-detail {

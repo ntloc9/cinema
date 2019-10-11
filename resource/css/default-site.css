@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: "Lato-Regular";
-    src: url("./resource/css/fonts/lato-regular.woff2") format("woff2");
+    src: url("./fonts/lato-regular.woff2") format("woff2");
     /* Modern Browsers */
     font-weight: normal;
     font-style: normal;
@@ -142,4 +142,9 @@ Nav {
 .nav-right .account {
     float: right;
     margin: 0 10px;
+}
+
+
+.seat-map{
+    padding-top: 50px
 }

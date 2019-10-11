@@ -1,5 +1,5 @@
 div.seatCharts-container {
-	/*min-width: 700px;*/
+	min-width: 700px;
 }
 div.seatCharts-cell {
 
@@ -14,6 +14,7 @@ div.seatCharts-cell {
 	color: blue;
 
 }
+
 div.seatCharts-seat {
 	background-color: green;
 	color: white;
@@ -21,10 +22,13 @@ div.seatCharts-seat {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	cursor: default;
+	position: relative;
 }
+
 div.seatCharts-seat:focus {
 	border: none;
 }
+
 /*
 .seatCharts-seat:focus {
 	outline: none;
@@ -33,9 +37,6 @@ div.seatCharts-seat:focus {
 
 div.seatCharts-space {
 	background-color: white;
-}
-div.seatCharts-row {
-	height: 50px;
 }
 
 div.seatCharts-row:after {
@@ -55,7 +56,8 @@ div.seatCharts-seat.available {
 }
 
 div.seatCharts-seat.unavailable {
-	background-color: red;
+	background-color: white;
+	border: 1px solid #000;
 	cursor: not-allowed;
 }
 
@@ -65,4 +67,19 @@ ul.seatCharts-legendList {
 li.seatCharts-legendItem {
 	margin-top: 10px;
 	line-height: 2;
+}
+
+div.seatCharts-seat.unavailable::after{
+	position: absolute;
+	top: -3px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	content: "\d7"; /* use the hex value here... */
+	font-size: 31px;
+	color: #5f5f5f;
+	/* line-height: 100px; */
+	text-align: center;
+	font-weight: 100;
+	font-family: 'Raleway', sans-serif;
 }

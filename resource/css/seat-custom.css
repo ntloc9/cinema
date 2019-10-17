@@ -2,8 +2,8 @@ a {
 	color: #b71a4c;
 }
 .front-indicator {
-	width: 145px;
-	margin: 5px 32px 15px 32px;
+	width: 100%;
+	margin: 5px 32px 15px 0;
 	background-color: #f6f6f6;	
 	color: #adadad;
 	text-align: center;
@@ -48,16 +48,7 @@ div.seatCharts-seat.selected {
 div.seatCharts-seat.unavailable {
 	background-color: #472B34;
 }
-div.seatCharts-container {
-	width: 200px;
-	padding: 20px;
-	float: left;
-}
-div.seatCharts-legend {
-	padding-left: 0px;
-	position: absolute;
-	bottom: 16px;
-}
+
 ul.seatCharts-legendList {
 	padding-left: 0px;
 }

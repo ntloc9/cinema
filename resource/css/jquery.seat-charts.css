@@ -1,18 +1,18 @@
 div.seatCharts-container {
-	min-width: 700px;
+	width: auto;
+	max-width: 700px;
 }
-div.seatCharts-cell {
 
-	height: 16px;
-	width: 16px;
-	margin: 3px;
+div.seatCharts-cell {
+	height: 22px;
+	width: 22px;
+	margin: 6px;
 	float: left;
 	text-align: center;
 	outline: none;
 	font-size: 13px;
-	line-height:16px;
+	line-height: 16px;
 	color: blue;
-
 }
 
 div.seatCharts-seat {
@@ -57,26 +57,28 @@ div.seatCharts-seat.available {
 
 div.seatCharts-seat.unavailable {
 	background-color: white;
-	border: 1px solid #000;
+	border: 1px solid rgb(75, 75, 75);
 	cursor: not-allowed;
 }
 
 ul.seatCharts-legendList {
 	list-style: none;
 }
+
 li.seatCharts-legendItem {
 	margin-top: 10px;
 	line-height: 2;
 }
 
-div.seatCharts-seat.unavailable::after{
+div.seatCharts-seat.unavailable::after {
 	position: absolute;
-	top: -3px;
+	top: 0px;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	content: "\d7"; /* use the hex value here... */
-	font-size: 31px;
+	content: "\d7";
+	/* use the hex value here... */
+	font-size: 35px;
 	color: #5f5f5f;
 	/* line-height: 100px; */
 	text-align: center;

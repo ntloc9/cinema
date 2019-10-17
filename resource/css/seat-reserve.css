@@ -1,6 +1,7 @@
-
 /* -------------------- */
+
 /* TOP BAR */
+
 /* -------------------- */
 
 .topbar {
@@ -17,7 +18,7 @@
     margin: 0 50px;
 }
 
-.user-info{
+.user-info {
     float: right;
 }
 
@@ -40,23 +41,60 @@
 }
 
 /* -------------------- */
+
+/* SEAT-AREA */
+
+/* -------------------- */
+
+.seat-area {
+    width: 70%;
+    height: 100vh;
+    float: left;
+    position: relative;
+}
+
+div.seatCharts-container {
+    /* margin: 50px 0 0 40px; */
+    padding: 20px;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.seatCharts-legend {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 50px;
+    ;
+}
+
+/* -------------------- */
+
 /* BOOKING DETAIL */
+
 /* -------------------- */
 
 .booking-details {
-    padding-top: 35px;
-    float: right;
-    text-align: left;
-    margin-left: 35px;
-    padding-right: 35px;
-    padding-left: 20px;
-    font-size: 12px;
-    position: relative;
     height: 100vh;
     width: 30%;
+    position: relative;
     border-left: 1px solid #fff;
     box-shadow: 0 0 15px rgb(0, 0, 0, 0.3);
     background-color: rgba(255, 255, 255, 0.8);
+    float: right;
+    text-align: left;
+    font-size: 12px;
+}
+
+.wrapper-booking-details {
+    width: 100%;
+    height: 90%;
+    padding-top: 35px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .booking-details h2 {
@@ -67,17 +105,13 @@
 .booking-details h3 {
     margin: 5px 5px 0 0;
     font-size: 14px;
-}
-
-.checkout-button {
-    display: block;
-    margin: 10px 0;
-    font-size: 14px;
+    height: 5%;
 }
 
 /* Total price */
 
 .total-price {
+    height: 15%;
     text-align: center;
 }
 
@@ -99,41 +133,46 @@ b.total-price-text {
     color: #fefefe;
 }
 
-.back-red{
+.back-red {
     background-color: #3a78c3;
 }
 
-.back-yellow{
+.back-yellow {
     background-color: #080;
 }
 
 #selected-seats {
     overflow-y: scroll;
     overflow-x: none;
-    width: 170px;
-    
+    /* width: 170px; */
+    height: 95%;
+}
+
+#selected-seats li {
+    padding: 5px 0;
 }
 
 /* ticket-detail */
 
-.ticket-detail{
+.ticket-detail {
     border-top: 1px solid rgba(204, 204, 204, 0.582);
-    padding: 20px 0;
+    padding: 15px 0;
+    height: 15%;
 }
 
-.movie-title{
+.movie-title {
     margin-bottom: 5px;
     font-size: 14px;
     height: 20px;
     font-weight: bold;
 }
 
-.movie-title p{
+.movie-title p {
     display: inline;
     line-height: 20px;
 }
 
-.movie-title .rating-type{
+.movie-title .rating-type {
     padding: 4px 12px;
     border-radius: 10%;
     font-size: 13px;
@@ -141,20 +180,64 @@ b.total-price-text {
     color: #fff;
 }
 
-.cinema-detail{
+.cinema-detail {
     margin-bottom: 5px;
 }
-.session-booking p{
+
+.session-booking p {
     text-transform: uppercase;
     display: inline;
     margin: 0 5px;
 }
 
-.session-booking p:first-child	{
+.session-booking p:first-child {
     margin-left: 0;
 }
 
-.wrapper-select-seat{
+.wrapper-select-seat {
     border-top: 1px solid rgba(204, 204, 204, 0.582);
-    padding: 20px 0;
+    padding: 10px 0;
+    height: 70%;
 }
+
+/* Check out button */
+
+.checkout-button {
+    background-color: rgb(133, 133, 133);
+    border: none;
+    color: #fff;
+    letter-spacing: 1px;
+    width: 100%;
+    font-size: 18px;
+    margin: 0;
+    height: 10%;
+    text-transform: uppercase;
+}
+
+/* -------------------- */
+
+/* SEAT MAP */
+
+/* -------------------- */
+
+/* -------------------- */
+
+/* CONFIRM SEAT */
+
+/* -------------------- */
+
+.confirm-seat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+

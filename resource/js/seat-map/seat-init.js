@@ -11,7 +11,7 @@ $(document).ready(function () {
                 'eeeeeeeeeee',
                 'eeeeeeeeeee',
                 'eeeeeeeeeee',
-                'eeeeeeeaaee',
+                'eeeeeeeeeee',
                 'eeeeeeeeeee',
                 'eeeeeeeeeee',
                 'eeeeeeeeeee',
@@ -20,12 +20,12 @@ $(document).ready(function () {
                 f: {
                     price: 50000,
                     classes: 'first-class', //your custom CSS class
-                    category: 'First Class'
+                    category: 'Ghe Vip'
                 },
                 e: {
                     price: 30000,
                     classes: 'economy-class', //your custom CSS class
-                    category: 'Economy Class'
+                    category: 'Ghe Thuong'
                 },
 
             },
@@ -42,8 +42,8 @@ $(document).ready(function () {
             legend: {
                 node: $('#legend'),
                 items: [
-                    ['f', 'available', 'First Class'],
-                    ['e', 'available', 'Vip Class'],
+                    ['f', 'available', 'Ghe Vip'],
+                    ['e', 'available', 'Ghe Thuong'],
                     ['f', 'unavailable', 'Already Booked']
                 ]
             },
@@ -53,15 +53,15 @@ $(document).ready(function () {
                     //let's create a new <li> which we'll add to the cart items
                     console.log(this.settings);
                     
-                    // $('<li>' + this.data().category + ' Seat # ' + this.settings.character.toUpperCase() + this.settings.column + ': <b>$' + this.data().price + '</b> <a href="#" class="cancel-cart-item">[cancel]</a></li>')
-                    //     .attr('id', 'cart-item-' + this.settings.id)
-                    //     .data('seatId', this.settings.id)
-                    //     .appendTo($cart);
-                    if (this.settings.character === 'e') {
-                        $('<span class="badge back-yellow">' + this.settings.id + '</span>').attr('id', 'cart-item-' + this.settings.id).data('seatId', this.settings.id).appendTo($cart);
-                    }else{
-                        $('<span class="badge back-red">' + this.settings.id + '</span>').attr('id', 'cart-item-' + this.settings.id).data('seatId', this.settings.id).appendTo($cart);
-                    }
+                    $('<li>' + this.data().category + '  #' + this.settings.id + ': <b>' + this.data().price + '&#273;</b> <a href="#" class="cancel-cart-item">[huy]</a></li>')
+                        .attr('id', 'cart-item-' + this.settings.id)
+                        .data('seatId', this.settings.id)
+                        .appendTo($cart);
+                    // if (this.settings.character === 'e') {
+                    //     $('<span class="badge back-yellow">' + this.settings.id + '</span>').attr('id', 'cart-item-' + this.settings.id).data('seatId', this.settings.id).appendTo($cart);
+                    // }else{
+                    //     $('<span class="badge back-red">' + this.settings.id + '</span>').attr('id', 'cart-item-' + this.settings.id).data('seatId', this.settings.id).appendTo($cart);
+                    // }
                     
                     /*
                      * Lets update the counter and total
